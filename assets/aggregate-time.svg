@@ -70,5 +70,5 @@
     <text x="672.6" y="368" text-anchor="middle">5,000 ms</text>
   </g>
 
-  <text x="24" y="396" font-size="11.5" fill="#898781">Equal-coverage comparison only. Gravity Sort posts the lowest total of all twelve algorithms (241.5 ms) but covers 34 of 35 patterns, so it appears in the table, not this chart.</text>
+  <text x="24" y="398" font-size="11.5" fill="#898781">Gravity Sort (241.5 ms, lowest of all twelve) covers 34 of 35 patterns, so it appears in the paper's table, not here.</text>
 </svg>

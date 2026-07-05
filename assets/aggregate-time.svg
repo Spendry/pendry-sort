@@ -1,0 +1,74 @@
+<svg viewBox="0 0 860 420" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+  <rect x="0.5" y="0.5" width="859" height="419" rx="8" fill="#fcfcfb" stroke="rgba(11,11,11,0.10)"/>
+
+  <text x="24" y="36" font-size="16" font-weight="600" fill="#0b0b0b">Total benchmark time, algorithms that complete all 35 patterns</text>
+  <text x="24" y="57" font-size="12.5" fill="#52514e">Sum of median times across the full suite, 1M int32 elements &#183; lower is better</text>
+
+  <!-- legend -->
+  <g font-size="11.5" fill="#898781">
+    <rect x="560" y="76" width="10" height="10" rx="2" fill="#2a78d6"/>
+    <text x="575" y="85">Built in this series</text>
+    <rect x="690" y="76" width="10" height="10" rx="2" fill="#1baf7a"/>
+    <text x="705" y="85">Industry standard</text>
+  </g>
+
+  <!-- gridlines: x0=170, 0.10052 px/ms, 570px = 5670ms -->
+  <g stroke="#e1e0d9" stroke-width="1">
+    <line x1="270.5" y1="96" x2="270.5" y2="352"/>
+    <line x1="371.0" y1="96" x2="371.0" y2="352"/>
+    <line x1="471.6" y1="96" x2="471.6" y2="352"/>
+    <line x1="572.1" y1="96" x2="572.1" y2="352"/>
+    <line x1="672.6" y1="96" x2="672.6" y2="352"/>
+  </g>
+
+  <!-- rows: pitch 42, bar h 20 -->
+  <!-- Pendry 359.2ms -> 36.1 -->
+  <g>
+    <text x="158" y="121" font-size="12.5" fill="#52514e" text-anchor="end">Pendry Sort</text>
+    <path d="M170,107 L202,107 Q206,107 206,111 L206,123 Q206,127 202,127 L170,127 Z" fill="#2a78d6"/>
+    <text x="214" y="121" font-size="12" fill="#0b0b0b" font-weight="600" style="font-variant-numeric: tabular-nums">359 ms</text>
+  </g>
+  <!-- Sieve v3 810.2 -> 81.4 -->
+  <g>
+    <text x="158" y="163" font-size="12.5" fill="#52514e" text-anchor="end">Sieve Sort v3</text>
+    <path d="M170,149 L247,149 Q251,149 251,153 L251,165 Q251,169 247,169 L170,169 Z" fill="#2a78d6"/>
+    <text x="259" y="163" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">810 ms</text>
+  </g>
+  <!-- radix-256 897.9 -> 90.3 -->
+  <g>
+    <text x="158" y="205" font-size="12.5" fill="#52514e" text-anchor="end">radix-256</text>
+    <path d="M170,191 L256,191 Q260,191 260,195 L260,207 Q260,211 256,211 L170,211 Z" fill="#1baf7a"/>
+    <text x="268" y="205" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">898 ms</text>
+  </g>
+  <!-- introsort 1638.0 -> 164.7 -->
+  <g>
+    <text x="158" y="247" font-size="12.5" fill="#52514e" text-anchor="end">introsort (std::sort)</text>
+    <path d="M170,233 L330,233 Q334,233 334,237 L334,249 Q334,253 330,253 L170,253 Z" fill="#1baf7a"/>
+    <text x="342" y="247" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">1,638 ms</text>
+  </g>
+  <!-- qsort 2736.4 -> 275.1 -->
+  <g>
+    <text x="158" y="289" font-size="12.5" fill="#52514e" text-anchor="end">qsort</text>
+    <path d="M170,275 L441,275 Q445,275 445,279 L445,291 Q445,295 441,295 L170,295 Z" fill="#1baf7a"/>
+    <text x="453" y="289" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">2,736 ms</text>
+  </g>
+  <!-- heapsort 5670.2 -> 570 -->
+  <g>
+    <text x="158" y="331" font-size="12.5" fill="#52514e" text-anchor="end">heapsort</text>
+    <path d="M170,317 L736,317 Q740,317 740,321 L740,333 Q740,337 736,337 L170,337 Z" fill="#1baf7a"/>
+    <text x="748" y="331" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">5,670 ms</text>
+  </g>
+
+  <!-- axis -->
+  <line x1="170" y1="352" x2="740" y2="352" stroke="#c3c2b7" stroke-width="1"/>
+  <g font-size="11" fill="#898781" style="font-variant-numeric: tabular-nums">
+    <text x="170" y="368">0</text>
+    <text x="270.5" y="368" text-anchor="middle">1,000</text>
+    <text x="371" y="368" text-anchor="middle">2,000</text>
+    <text x="471.6" y="368" text-anchor="middle">3,000</text>
+    <text x="572.1" y="368" text-anchor="middle">4,000</text>
+    <text x="672.6" y="368" text-anchor="middle">5,000 ms</text>
+  </g>
+
+  <text x="24" y="396" font-size="11.5" fill="#898781">Equal-coverage comparison only. Gravity Sort posts the lowest total of all twelve algorithms (241.5 ms) but covers 34 of 35 patterns, so it appears in the table, not this chart.</text>
+</svg>

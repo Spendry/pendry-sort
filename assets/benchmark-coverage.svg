@@ -1,0 +1,79 @@
+<svg viewBox="0 0 860 486" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+  <rect x="0.5" y="0.5" width="859" height="485" rx="8" fill="#fcfcfb" stroke="rgba(11,11,11,0.10)"/>
+
+  <text x="24" y="36" font-size="16" font-weight="600" fill="#0b0b0b">Benchmark coverage: how much of the suite each algorithm survives</text>
+  <text x="24" y="57" font-size="12.5" fill="#52514e">Patterns handled, out of 35 &#183; unified benchmark, 1M int32 elements &#183; ordered by when each algorithm appears in the series</text>
+
+  <!-- legend -->
+  <g font-size="11.5" fill="#898781">
+    <rect x="560" y="76" width="10" height="10" rx="2" fill="#2a78d6"/>
+    <text x="575" y="85">Handled</text>
+    <rect x="640" y="76" width="10" height="10" rx="2" fill="#e1e0d9"/>
+    <text x="655" y="85">N/A</text>
+    <rect x="695" y="76" width="10" height="10" rx="2" fill="#d03b3b"/>
+    <text x="710" y="85">FAIL (wrong output)</text>
+  </g>
+
+  <!-- rows: name | bar (x0=170, 16px per pattern, 35 = 560px) | count label -->
+  <!-- SafeSlot-C: 19 handled, 16 NA -->
+  <g>
+    <text x="158" y="121" font-size="12.5" fill="#52514e" text-anchor="end">SafeSlot-C</text>
+    <path d="M170,107 L470,107 Q474,107 474,111 L474,123 Q474,127 470,127 L170,127 Z" fill="#2a78d6"/>
+    <rect x="476" y="107" width="254" height="20" fill="#e1e0d9"/>
+    <text x="738" y="121" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">19/35</text>
+  </g>
+  <!-- MicroSSS: 9, 26 -->
+  <g>
+    <text x="158" y="163" font-size="12.5" fill="#52514e" text-anchor="end">MicroSSS</text>
+    <path d="M170,149 L310,149 Q314,149 314,153 L314,165 Q314,169 310,169 L170,169 Z" fill="#2a78d6"/>
+    <rect x="316" y="149" width="414" height="20" fill="#e1e0d9"/>
+    <text x="738" y="163" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">9/35</text>
+  </g>
+  <!-- Gravity Sort: 34, 1 -->
+  <g>
+    <text x="158" y="205" font-size="12.5" fill="#52514e" text-anchor="end">Gravity Sort</text>
+    <path d="M170,191 L710,191 Q714,191 714,195 L714,207 Q714,211 710,211 L170,211 Z" fill="#2a78d6"/>
+    <rect x="716" y="191" width="14" height="20" fill="#e1e0d9"/>
+    <text x="738" y="205" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">34/35</text>
+  </g>
+  <!-- CAS-Core: 9, 26 -->
+  <g>
+    <text x="158" y="247" font-size="12.5" fill="#52514e" text-anchor="end">CAS-Core</text>
+    <path d="M170,233 L310,233 Q314,233 314,237 L314,249 Q314,253 310,253 L170,253 Z" fill="#2a78d6"/>
+    <rect x="316" y="233" width="414" height="20" fill="#e1e0d9"/>
+    <text x="738" y="247" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">9/35</text>
+  </g>
+  <!-- CAS-Binary: 9, 26 -->
+  <g>
+    <text x="158" y="289" font-size="12.5" fill="#52514e" text-anchor="end">CAS-Binary</text>
+    <path d="M170,275 L310,275 Q314,275 314,279 L314,291 Q314,295 310,295 L170,295 Z" fill="#2a78d6"/>
+    <rect x="316" y="275" width="414" height="20" fill="#e1e0d9"/>
+    <text x="738" y="289" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">9/35</text>
+  </g>
+  <!-- Pendry Sort: 35 -->
+  <g>
+    <text x="158" y="331" font-size="12.5" fill="#52514e" text-anchor="end">Pendry Sort</text>
+    <path d="M170,317 L726,317 Q730,317 730,321 L730,333 Q730,337 726,337 L170,337 Z" fill="#2a78d6"/>
+    <text x="738" y="331" font-size="12" font-weight="600" fill="#0b0b0b" style="font-variant-numeric: tabular-nums">35/35</text>
+  </g>
+  <!-- Sieve Sort v3: 35 -->
+  <g>
+    <text x="158" y="373" font-size="12.5" fill="#52514e" text-anchor="end">Sieve Sort v3</text>
+    <path d="M170,359 L726,359 Q730,359 730,363 L730,375 Q730,379 726,379 L170,379 Z" fill="#2a78d6"/>
+    <text x="738" y="373" font-size="12" font-weight="600" fill="#0b0b0b" style="font-variant-numeric: tabular-nums">35/35</text>
+  </g>
+  <!-- Little Pendry: 33 handled, 2 FAIL -->
+  <g>
+    <text x="158" y="415" font-size="12.5" fill="#52514e" text-anchor="end">Little Pendry</text>
+    <path d="M170,401 L694,401 Q698,401 698,405 L698,417 Q698,421 694,421 L170,421 Z" fill="#2a78d6"/>
+    <path d="M700,401 L726,401 Q730,401 730,405 L730,417 Q730,421 726,421 L700,421 Z" fill="#d03b3b"/>
+    <text x="738" y="415" font-size="12" fill="#52514e" style="font-variant-numeric: tabular-nums">33/35 &#183; 2 FAIL</text>
+  </g>
+
+  <!-- baseline -->
+  <line x1="170" y1="432" x2="730" y2="432" stroke="#c3c2b7" stroke-width="1"/>
+  <text x="170" y="448" font-size="11" fill="#898781">0</text>
+  <text x="730" y="448" font-size="11" fill="#898781" text-anchor="end">35 patterns</text>
+
+  <text x="24" y="472" font-size="11.5" fill="#898781">N/A: the algorithm declines the pattern (range guard) or cannot converge on it. FAIL: it returned unsorted output (Little Pendry on Two Blocks and Outlier).</text>
+</svg>
